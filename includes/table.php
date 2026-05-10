@@ -1,0 +1,43 @@
+<div class="table-responsive">
+    <div class="d-flex justify-content-between align-items-center m-3">
+        <p class="text-muted mb-0"><?= count($products) ?> products</p>
+        <a href="create.php" class="btn btn-primary">
+            <i class="bi bi-database-fill-add"></i> Add product
+        </a>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($products as $row) : ?>
+            <tr>
+                <td><?= $row['id'] ?></td>
+                <td><?= htmlspecialchars($row['name']) ?></td>
+                <td><?= htmlspecialchars($row['description']) ?></td>
+                <td><?= number_format($row['price'], 2) ?> €</td>
+                <td><?= htmlspecialchars($row['category_name']) ?></td>
+                <td class="text-center">
+                    <a href="update.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-pen-fill"></i> Edit
+                    </a>
+                    <a href="delete.php?id=<?= $row['id'] ?>"
+                       onclick="return confirm('Delete this entry?')"
+                       class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-trash-fill"></i> Delete
+                    </a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

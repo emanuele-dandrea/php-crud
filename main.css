@@ -1,7 +1,7 @@
 /* || GENERAL */
 
 html {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-size:  clamp(1em, .7em + .4vw, 3em);
 }
 
@@ -9,12 +9,27 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: var(--bg-color);
+}
+
+main {
+  overflow: hidden;
+}
+
+.padding {
+  padding: 1rem 0;
 }
 
 .width {
-  width: min(50rem, 100% - 1rem);
+  width: min(60rem, 100% - 2rem);
   margin-inline: auto;
+}
+
+.table td,
+.table th {
+  white-space: nowrap;
+}
+.table-responsive {
+  padding: 0 !important;
 }
 
 /* || RESET CSS */
