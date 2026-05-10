@@ -26,3 +26,10 @@ services:
       - ./crud.sql:/docker-entrypoint-initdb.d/crud.sql
     ports:
       - "3306:3306"
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    ports:
+      - "8000:8080"
+    depends_on:
+      - db
