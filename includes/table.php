@@ -1,12 +1,11 @@
 <div class="table-responsive">
     <div class="d-flex justify-content-between align-items-center m-3">
         <p class="text-muted mb-0"><?= count($products) ?> products</p>
-        <a href="create.php" class="btn btn-primary">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createProduct">
             <i class="bi bi-database-fill-add"></i> Add product
-        </a>
+        </button>
     </div>
-
-    <table class="table table-bordered table-hover">
+    <table class="table table-hover table-striped">
         <thead class="table-light">
             <tr>
                 <th>ID</th>
@@ -17,7 +16,6 @@
                 <th class="text-center">Action</th>
             </tr>
         </thead>
-
         <tbody>
             <?php foreach ($products as $row) : ?>
             <tr>
@@ -27,12 +25,17 @@
                 <td><?= number_format($row['price'], 2) ?> €</td>
                 <td><?= htmlspecialchars($row['category_name']) ?></td>
                 <td class="text-center">
-                    <a href="update.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-secondary">
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editProduct"
+                    >
                         <i class="bi bi-pen-fill"></i> Edit
-                    </a>
-                    <a href="delete.php?id=<?= $row['id'] ?>"
-                       onclick="return confirm('Delete this entry?')"
-                       class="btn btn-sm btn-outline-danger">
+                    </button>
+                    <a href="./actions/delete_product.php?id=<?= $row['id'] ?>"
+                        onclick="return confirm('Delete this entry?')"
+                        class="btn btn-sm btn-outline-danger">
                         <i class="bi bi-trash-fill"></i> Delete
                     </a>
                 </td>
