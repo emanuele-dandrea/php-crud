@@ -1,12 +1,18 @@
 <div class="table-responsive">
     <div class="d-flex justify-content-between align-items-center m-3">
         <p class="text-muted mb-0"><?= count($products) ?> products</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createProduct">
+        <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#createProduct"
+            title="Insert product to database"
+        >
             <i class="bi bi-database-fill-add"></i> Add product
         </button>
     </div>
     <table class="table table-hover table-striped">
-        <thead class="table-light">
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -30,13 +36,17 @@
                         class="btn btn-sm btn-outline-secondary"
                         data-bs-toggle="modal"
                         data-bs-target="#editProduct"
+                        title="Edit this entry"
                     >
                         <i class="bi bi-pen-fill"></i> Edit
                     </button>
                     <a href="./actions/delete_product.php?id=<?= $row['id'] ?>"
                         onclick="return confirm('Delete this entry?')"
-                        class="btn btn-sm btn-outline-danger">
-                        <i class="bi bi-trash-fill"></i> Delete
+                        class="btn btn-sm btn-outline-danger"
+                        title="Delete this entry"
+                    >
+                        <i class="bi bi-trash-fill"></i>                       
+                        Delete
                     </a>
                 </td>
             </tr>
