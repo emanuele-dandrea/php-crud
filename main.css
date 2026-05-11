@@ -2,7 +2,7 @@
 
 html {
   /* font-family: sans-serif; */
-  font-size:  clamp(1em, .7em + .4vw, 3em);
+  font-size:  clamp(1.1em, .7em + .4vw, 3em);
 
   --bs-icon-link-transform: translate3d(0, -.15rem, 0);
 }
