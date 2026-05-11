@@ -9,7 +9,7 @@ class Product {
 
     public function read(): PDOStatement {
         $stmt = $this->conn->prepare("
-            SELECT p.id, p.name, p.description, p.price, c.name AS category_name
+            SELECT p.id, p.name, p.category_id, p.description, p.price, c.name AS category_name
             FROM {$this->table} p
             LEFT JOIN categories c ON p.category_id = c.id
             ORDER BY p.created DESC
