@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/config/Database.php'; 
 require_once __DIR__ . '/models/Product.php';
+require_once __DIR__ . '/models/Category.php';
 ?>
 
 <!DOCTYPE html>
@@ -59,10 +60,30 @@ require_once __DIR__ . '/models/Product.php';
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"
-        >
+        >       
         </script>
 
         <script>
+            document.getElementById('editProduct').addEventListener('show.bs.modal', e => {
+                const btn = e.relatedTarget;
+                document.getElementById('edit_id').value          = btn.dataset.id;
+                document.getElementById('edit_name').value        = btn.dataset.name;
+                document.getElementById('edit_description').value = btn.dataset.description;
+                document.getElementById('edit_price').value       = btn.dataset.price;
+                document.getElementById('edit_category').value    = btn.dataset.category;
+            });
+        
+            // Form validation
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', e => {
+                    if (!form.checkValidity()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                });
+            });
+           
             // Popper tooltips
             const tooltipTriggerList = document.querySelectorAll('[title]')
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
