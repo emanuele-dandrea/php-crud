@@ -19,6 +19,8 @@
                 <th>Description</th>
                 <th>Price</th>
                 <th>Category</th>
+                <th>Created</th>
+                <th>Modified</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>
@@ -27,8 +29,11 @@
             <tr>
                 <td><?= $row['id'] ?></td>
                 <td><?= htmlspecialchars($row['name']) ?></td>
-                <td><?= htmlspecialchars($row['description']) ?></td>
+                <td class="description"><?= htmlspecialchars($row['description']) ?></td>
                 <td><?= number_format($row['price'], 2) ?> €</td>
+                <td><?= htmlspecialchars($row['category_name']) ?></td>
+                <td><?= date($row['created']) ?></td>
+                <td><?= date($row['modified']) ?></td>
                 <td><?= htmlspecialchars($row['category_name']) ?></td>
                 <td class="text-center">
                     <button
