@@ -46,6 +46,13 @@ main {
   }
 }
 
+/* AUTH  */
+
+:not(.modal-body) > form {
+  width: min(25em, 100%);
+  margin-inline: auto;
+}
+
 /* || RESET CSS */
 
 /* Source: https://www.joshwcomeau.com/css/custom-css-reset/ */
