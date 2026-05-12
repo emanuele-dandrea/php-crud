@@ -34,7 +34,7 @@ class Product {
     public function update(int $id, string $name, string $description, float $price, int $category_id): bool {
         $stmt = $this->conn->prepare("
             UPDATE {$this->table}
-            SET name = :name, description = :description, price = :price, category_id = :category_id
+            SET name = :name, description = :description, price = :price, category_id = :category_id, modified = NOW()
             WHERE id = :id
         ");
         return $stmt->execute([
