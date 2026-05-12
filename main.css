@@ -22,8 +22,14 @@ main {
 }
 
 .width {
-  width: min(70rem, 100% - 2rem);
+  width: min(80rem, 100% - 2rem);
   margin-inline: auto;
+}
+
+.description {
+  max-width: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .table td,
