@@ -34,7 +34,6 @@
                 <td><?= htmlspecialchars($row['category_name']) ?></td>
                 <td><?= date($row['created']) ?></td>
                 <td><?= date($row['modified']) ?></td>
-                <td><?= htmlspecialchars($row['category_name']) ?></td>
                 <td class="text-center">
                     <button
                         type="button"

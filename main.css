@@ -26,6 +26,8 @@ main {
   margin-inline: auto;
 }
 
+/* TABLE */
+
 .description {
   max-width: 3rem;
   overflow: hidden;
@@ -36,8 +38,12 @@ main {
 .table th {
   white-space: nowrap;
 }
-.table-responsive {
-  padding: 0 !important;
+
+@media (max-width: 1200px) {
+  .table-responsive {
+    border-radius: var(--bs-border-radius);
+    border: .2rem solid var(--bs-border-color);
+  }
 }
 
 /* || RESET CSS */
