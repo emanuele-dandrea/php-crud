@@ -34,7 +34,7 @@ password: pass
 database: crud
 ```
 
-> **Important**  
+> [!Important]  
 > Remember that if you need to change the database config in the `compose.yaml`, you must also do it in `/config/Database.php`.
 
 ### XAMPP (Windows)
@@ -42,4 +42,5 @@ database: crud
 Just put the project folder to `C:\xampp\htdocs\` (path for Windows), and visualize it in your browser
 at `http://localhost/your-project-name`. 
 
-> Remember to adapt the private member variables in `/config/Database.php` with XAMPP MySQL configuration.
+> [!Note]
+> Probably you need to adapt the private member variables in `config/Database.php` with XAMPP MySQL configuration.
