@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login/');
+    exit;
+}
+?>
+
+<?php
 define('INCLUDED', true);
 
 require_once __DIR__ . '/config/Database.php';
