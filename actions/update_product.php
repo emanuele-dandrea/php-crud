@@ -3,7 +3,8 @@ require_once __DIR__ . '/../config/Database.php';
 require_once __DIR__ . '/../models/Product.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ../');
+    http_response_code(404);
+    include __DIR__ . '/../404.html';
     exit;
 }
 
@@ -24,5 +25,5 @@ $product  = new Product($conn);
 
 $product->update($id, $name, $description, $price, $category_id);
 
-header('Location: ../');
+header('Location: ../?edited=1');
 exit;

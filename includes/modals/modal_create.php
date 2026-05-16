@@ -1,3 +1,12 @@
+<?php
+
+if (!defined('INCLUDED')) {
+  http_response_code(404);
+  include __DIR__ . '/../404.html';
+  exit();
+}
+?>
+
 <div class="modal fade" id="createProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -25,9 +34,9 @@
               <div class="invalid-feedback">Description is required.</div>
           </div>
 
-          <div class"mb-3">
+          <div>
             <select class="form-select" id="create_category" name="category_id" required>
-              <?php foreach ($categories as $cat) : ?>
+              <?php foreach ($categories as $cat): ?>
               <option value="<?= $cat['id'] ?>"><?= htmlspecialchars($cat['name']) ?></option>
               <?php endforeach; ?>
             </select>

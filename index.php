@@ -1,7 +1,18 @@
 <?php
-require_once __DIR__ . '/config/Database.php'; 
+define('INCLUDED', true);
+
+require_once __DIR__ . '/config/Database.php';
 require_once __DIR__ . '/models/Product.php';
 require_once __DIR__ . '/models/Category.php';
+
+$database = new Database();
+$conn = $database->getConnection();
+
+$product  = new Product($conn);
+$products = $product->read()->fetchAll();
+
+$category   = new Category($conn);
+$categories = $category->read()->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -49,9 +60,10 @@ require_once __DIR__ . '/models/Category.php';
         </main>
 
         <?php
+
         include __DIR__ . '/includes/modals/modal_create.php';
         include __DIR__ . '/includes/modals/modal_edit.php';
-       
+
         include __DIR__ . '/includes/footer.php';
         ?>
        
@@ -62,6 +74,8 @@ require_once __DIR__ . '/models/Category.php';
             crossorigin="anonymous"
         >       
         </script>
+        
+        <?php include __DIR__ . '/includes/toasts.php' ?>
 
         <script>
             document.getElementById('editProduct').addEventListener('show.bs.modal', e => {
@@ -79,7 +93,7 @@ require_once __DIR__ . '/models/Category.php';
                     if (!form.checkValidity()) {
                         e.preventDefault();
                         e.stopPropagation();
-                    }
+                    }                                               
                     form.classList.add('was-validated');
                 });
             });

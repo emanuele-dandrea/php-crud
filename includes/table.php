@@ -1,3 +1,12 @@
+<?php
+
+if (!defined('INCLUDED')) {
+    http_response_code(404);
+    include __DIR__ . '/../404.html';
+    exit();
+}
+?>
+
 <div class="table-responsive">
     <div class="d-flex justify-content-between align-items-center m-3">
         <p class="text-muted mb-0"><?= count($products) ?> products</p>
@@ -25,7 +34,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($products as $row) : ?>
+            <?php foreach ($products as $row): ?>
             <tr>
                 <td><?= $row['id'] ?></td>
                 <td><?= htmlspecialchars($row['name']) ?></td>

@@ -1,13 +1,13 @@
-# php-crud
+# dummy-crud
 A simple CRUD project developed during my studies at a technical institute.
 
 This project **is not intended for production** use. However it can be useful for learning
 [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming): including classes, methods, and basic application structure.
 It also has a light demonstration of server-side form validation via PHP.
 
-The interface is made with [bootstrap](https://getbootstrap.com/) and also gives a simple demonstration of the use of modal dialogs.
+The interface is made with [Bootstrap](https://getbootstrap.com/) and also gives a simple demonstration of the use of modal dialogs.
 
-<img src="assets/demo.png" width="600" />
+<img src="assets/demo.png" width="800" />
 
 ## Serve the project
 
@@ -34,7 +34,7 @@ password: pass
 database: crud
 ```
 
-> **Important**  
+> [!Important]  
 > Remember that if you need to change the database config in the `compose.yaml`, you must also do it in `/config/Database.php`.
 
 ### XAMPP (Windows)
@@ -42,4 +42,5 @@ database: crud
 Just put the project folder to `C:\xampp\htdocs\` (path for Windows), and visualize it in your browser
 at `http://localhost/your-project-name`. 
 
-> Remember to adapt the private member variables in `/config/Database.php` with XAMPP MySQL configuration.
+> [!Note]
+> Probably you need to adapt the private member variables in `config/Database.php` with XAMPP MySQL configuration.

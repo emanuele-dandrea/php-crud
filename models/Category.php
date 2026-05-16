@@ -13,6 +13,3 @@ class Category {
         return $stmt;
     }
 }
-
-$category   = new Category($conn);
-$categories = $category->read()->fetchAll();
