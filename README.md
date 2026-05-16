@@ -1,13 +1,13 @@
-# php-crud
+# dummy-crud
 A simple CRUD project developed during my studies at a technical institute.
 
 This project **is not intended for production** use. However it can be useful for learning
 [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming): including classes, methods, and basic application structure.
 It also has a light demonstration of server-side form validation via PHP.
 
-The interface is made with [bootstrap](https://getbootstrap.com/) and also gives a simple demonstration of the use of modal dialogs.
+The interface is made with [Bootstrap](https://getbootstrap.com/) and also gives a simple demonstration of the use of modal dialogs.
 
-<img src="assets/demo.png" width="600" />
+<img src="assets/demo.png" width="800" />
 
 ## Serve the project
 
