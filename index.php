@@ -75,6 +75,8 @@ $categories = $category->read()->fetchAll();
         >       
         </script>
         
+        <?php include __DIR__ . '/includes/toasts.php' ?>
+
         <script>
             document.getElementById('editProduct').addEventListener('show.bs.modal', e => {
                 const btn = e.relatedTarget;
