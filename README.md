@@ -47,7 +47,7 @@ at `http://localhost/your-project-name`.
 
 ## Authentication
 I'd like to point out that the authentication system makes no sense since it's a CRUD app,
-so giving anyone the ability to register and make changes to the database makes the rest of the work pointless.
+so giving anyone the possibility to register and make changes to the database makes the rest of the work pointless.
 Despite this, the project (firstly the concept behind it) turned out quite well, although there are definitely things that can be improved.
 
 Considering what i say above, and that I want to keep the main branch only with the CRUD: I will not currently do the merge.
