@@ -10,7 +10,10 @@ if (!$id) {
     exit;
 }
 
+$database = new Database();
+$conn = $database->getConnection();
 $product = new Product($conn);
+
 $product->delete($id);
 
 header('Location: ../?deleted=1');

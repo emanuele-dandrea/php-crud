@@ -51,6 +51,3 @@ class Product {
         return $stmt->execute([':id' => $id]);
     }
 }
-
-$product  = new Product($conn);
-$products = $product->read()->fetchAll();

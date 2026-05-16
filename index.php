@@ -4,6 +4,15 @@ define('INCLUDED', true);
 require_once __DIR__ . '/config/Database.php';
 require_once __DIR__ . '/models/Product.php';
 require_once __DIR__ . '/models/Category.php';
+
+$database = new Database();
+$conn = $database->getConnection();
+
+$product  = new Product($conn);
+$products = $product->read()->fetchAll();
+
+$category   = new Category($conn);
+$categories = $category->read()->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +74,7 @@ require_once __DIR__ . '/models/Category.php';
             crossorigin="anonymous"
         >       
         </script>
-
+        
         <script>
             document.getElementById('editProduct').addEventListener('show.bs.modal', e => {
                 const btn = e.relatedTarget;
