@@ -49,7 +49,7 @@ main {
 /* AUTH  */
 
 :not(.modal-body) > form {
-  width: min(25em, 100%);
+  width: min(20em, 100%);
   margin-inline: auto;
 }
 
