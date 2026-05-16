@@ -23,5 +23,5 @@ $product  = new Product($conn);
 
 $product->create($name, $description, $price, $category_id);
 
-header('Location: ../');
+header('Location: ../?created=1');
 exit;

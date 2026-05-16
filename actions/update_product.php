@@ -24,5 +24,5 @@ $product  = new Product($conn);
 
 $product->update($id, $name, $description, $price, $category_id);
 
-header('Location: ../');
+header('Location: ../?edited=1');
 exit;

@@ -12,5 +12,5 @@ if (!$id) {
 $product = new Product($conn);
 $product->delete($id);
 
-header('Location: ../');
+header('Location: ../?deleted=1');
 exit;
