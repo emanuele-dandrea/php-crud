@@ -4,13 +4,13 @@ require_once __DIR__ . '/../models/Product.php';
 
 if (!isset($_SESSION['user_id'])) {
     http_response_code(401);
-    header('Location: ../code-state/401.html');
+    include __DIR__ . '/../status-codes/401.html';
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(404);
-    include __DIR__ . '/../code-state/404.html';
+    include __DIR__ . '/../status-codes/404.html';
     exit;
 }
 

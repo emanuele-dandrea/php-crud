@@ -2,7 +2,7 @@
 
 if (!defined('INCLUDED')) {
     http_response_code(404);
-    include __DIR__ . '/../code-state/404.html';
+    include __DIR__ . '/../status-codes/404.html';
     exit();
 }
 ?>

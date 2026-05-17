@@ -6,7 +6,7 @@ session_start();
 
 if (!isset($_SESSION['user_id'])) {
     http_response_code(401);
-    header('Location: ../code-state/401.html');
+    include __DIR__ . '/../status-codes/401.html';
     exit;
 }
 
@@ -14,7 +14,7 @@ $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if (!$id) {
     http_response_code(404);
-    include __DIR__ . '/../code-state/404.html';
+    include __DIR__ . '/../status-codes/404.html';
     exit;
 }
 
