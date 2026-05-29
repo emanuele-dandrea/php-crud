@@ -15,7 +15,7 @@ if (!defined('INCLUDED')) {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="../../actions/create_product.php" method="post" id="createForm" novalidate>          
+        <form action="./actions/create_product.php" method="post" id="createForm" novalidate>          
           <div class="input-group mb-3">
             <span class="input-group-text">Product name</span>
             <input type="text" class="form-control" id="create_name" name="name" placeholder="Ultra Potato" required>

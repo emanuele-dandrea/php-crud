@@ -15,7 +15,7 @@ if (!defined('INCLUDED')) {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="../../actions/update_product.php" method="post" id="editForm" novalidate>
+        <form action="./actions/update_product.php" method="post" id="editForm" novalidate>
           <input type="hidden" id="edit_id" name="id">
           <div class="input-group mb-3">
             <span class="input-group-text">Product name</span>
